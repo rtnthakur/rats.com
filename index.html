@@ -99,8 +99,8 @@
 
   /* ---------- layout shells ---------- */
   .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
-  section{padding:120px 0;}
-  @media(max-width:720px){section{padding:76px 0;} .wrap{padding:0 20px;}}
+  section{padding:70px 0;}
+  @media(max-width:720px){section{padding:52px 0;} .wrap{padding:0 20px;}}
 
   h1,h2,h3{font-family:'Space Grotesk',sans-serif;margin:0;letter-spacing:-0.01em;}
   .kicker{
@@ -176,6 +176,8 @@
     backdrop-filter:blur(20px) saturate(150%);
     -webkit-backdrop-filter:blur(20px) saturate(150%);
     transition:color .2s ease, background .2s ease, border-color .2s ease;
+    min-width:96px;
+    text-align:center;
   }
   .nav-links a:hover{color:var(--text-0);border-color:var(--border-hi);}
   .nav-links a.active{color:var(--bg-0);background:var(--teal);border-color:var(--teal);font-weight:500;}
@@ -192,17 +194,26 @@
   .menu-wrap.open .menu-btn svg{transform:rotate(180deg);}
   .menu-panel{
     position:absolute;top:calc(100% + 12px);right:0;
-    width:220px;padding:20px;
+    width:220px;padding:14px;
     opacity:0;visibility:hidden;transform:translateY(-8px);
     transition:opacity .2s ease, transform .2s ease, visibility .2s;
   }
   .menu-wrap.open .menu-panel{opacity:1;visibility:visible;transform:translateY(0);}
+  .menu-panel .kicker{padding:0 6px;}
   .menu-panel a{
-    display:block;padding:9px 2px;font-size:14.5px;color:var(--text-0);text-decoration:none;
+    display:block;padding:10px 12px;margin:2px 0;font-size:14.5px;color:var(--text-0);text-decoration:none;
+    border-radius:10px;
+    transition:color .2s ease, background .2s ease, box-shadow .25s ease, backdrop-filter .2s ease;
   }
-  .menu-panel a:hover{color:var(--teal);}
+  .menu-panel a:hover{
+    color:var(--teal);
+    background:rgba(104,224,201,0.14);
+    box-shadow:0 0 20px rgba(104,224,201,0.28);
+    backdrop-filter:blur(6px) saturate(160%);
+    -webkit-backdrop-filter:blur(6px) saturate(160%);
+  }
   .menu-panel .resume-link{color:var(--teal);}
-  .menu-panel hr{border:none;border-top:1px solid var(--border);margin:8px 0;}
+  .menu-panel hr{border:none;border-top:1px solid var(--border);margin:8px 6px;}
 
   /* ---------- hero (redesign) ---------- */
   .hero{
@@ -504,7 +515,7 @@
     <div class="glass sheen hero-card">
       <div class="eyebrow-line"><span class="dot"></span> New Delhi, India</div>
       <h1>Ratnesh Kumar<br><span class="grad-a">breaks things,</span> then <span class="grad-b">fixes</span> them.</h1>
-      <p class="lede">Cybersecurity Analyst with 2.5 years in VAPT, penetration testing and security research - 24x CVE credited, 3 Hall of Fame acknowledgments from OLX and Dintero, and currently preparing for OSCP.</p>
+      <p class="lede">Cybersecurity Analyst with 2.5 years in VAPT, penetration testing and security research — 24x CVE credited, 3 Hall of Fame acknowledgments from OLX and Dintero, and currently preparing for OSCP.</p>
       <div class="hero-actions">
         <a class="btn btn-solid" href="#contact">Work with me</a>
         <a class="btn btn-ghost" href="#resume">See the record</a>
@@ -532,7 +543,7 @@
 
       <div class="glass sheen status-card">
         <p class="kicker" style="margin:0;">status</p>
-        <h3>Freelance - available</h3>
+        <h3>Freelance — available</h3>
         <p>Web app pentesting, VAPT support and development work.</p>
       </div>
 
@@ -587,6 +598,7 @@
     </div>
   </div>
 </section>
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="wrap">
@@ -623,6 +635,7 @@
     </div>
   </div>
 </section>
+
 <!-- RESUME -->
 <section id="resume">
   <div class="wrap">
@@ -644,6 +657,7 @@
           <div class="org">RSS Science College, Sitamarhi, Bihar (BSEB)</div>
         </div>
       </div>
+
       <div>
         <p class="col-label">Experience</p>
         <div class="glass sheen tint-teal rcard">
@@ -696,6 +710,7 @@
     </div>
   </div>
 </section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
@@ -711,6 +726,7 @@
     </div>
   </div>
 </section>
+
 <footer>
   <div class="wrap">
     <div class="glass footer-bar">
